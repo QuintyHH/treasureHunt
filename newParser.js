@@ -1,8 +1,8 @@
 const fs = require('fs')
 const pf = require('pathfinding')
-const consoleYellow = '\x1b[33m%s\x1b[0m'
-const consoleRed = '\x1b[31m%s\x1b[0m'
-const file = process.argv[2] // Here I am setting the filepath I need processed
+const CONSOLE_YELLOW = '\x1b[33m%s\x1b[0m'
+const CONSOLE_RED = '\x1b[31m%s\x1b[0m'
+const FILE_PATH = process.argv[2] // Here I am setting the filepath I need processed
 
 const pipe = (...fns) => (value) => fns.reduce((value, fn) => fn(value), value)
 
@@ -97,8 +97,8 @@ const renderMap = (map) => {
 
 const renderNotification = (path) =>
   path
-    ? console.log(consoleYellow, 'Treasure was found! Argghhh matey!')
-    : console.log(consoleRed, 'No treasure here! Back to the ship!')
+    ? console.log(CONSOLE_YELLOW, 'Treasure was found! Argghhh matey!')
+    : console.log(CONSOLE_RED, 'No treasure here! Back to the ship!')
 
 const main = (file) => {
   // This is our drawn map with S as start E as treasure X for reef and . for spaces where we can add our steps.
@@ -120,4 +120,4 @@ const main = (file) => {
   renderNotification(path)
 }
 
-main(file)
+main(FILE_PATH)
