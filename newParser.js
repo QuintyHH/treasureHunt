@@ -98,13 +98,12 @@ const renderMap = (map) => {
   return console.table(map)
 }
 
-const renderNotification = (type = FAIL, path = false) => {
-  return type === SUCCESS
+const renderNotification = (type = FAIL, path = false) =>
+  type === SUCCESS
     ? path
       ? console.log(CONSOLE_YELLOW, 'Treasure was found! Argghhh matey!')
       : console.log(CONSOLE_RED, 'No treasure here! Back to the ship!')
     : console.log(CONSOLE_RED, 'Treasure map could not be deciphered!')
-}
 
 const main = (file) => {
   try {
