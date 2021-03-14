@@ -1,5 +1,5 @@
 {
-  "name": "treasureHunt",
+  "name": "treasure-hunt",
   "version": "1.0.0",
   "description": "Pirates Treasure Hunt",
   "main": "newParser.js",
