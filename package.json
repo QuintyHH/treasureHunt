@@ -7,8 +7,8 @@
     "start": "nodemon newParser.js path-basic.txt ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Valentina Vanu",
-  "license": "ISC",
+  "author": "Anon",
+  "license": "MIT",
   "dependencies": {
     "nodemon": "^2.0.7",
     "pathfinding": "^0.4.18"
