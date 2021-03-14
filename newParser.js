@@ -88,6 +88,16 @@ const formatMap = (mapObj) => {
   return { path: path.length, map }
 }
 
+const renderMap = (map) => {
+  console.clear()
+  return console.table(map)
+}
+
+const renderNotification = (path) =>
+  path
+    ? console.log('\x1b[33m%s\x1b[0m', 'Treasure was found! Argghhh matey!')
+    : console.log('\x1b[31m%s\x1b[0m', 'No treasure here! Back to the ship!')
+
 const main = (file) => {
   // This is our drawn map with S as start E as treasure X for reef and . for spaces where we can add our steps.
   const treasureMap = pipe(
@@ -104,12 +114,8 @@ const main = (file) => {
   )(file)
 
   const { map, path } = treasureMap
-
-  console.clear()
-  console.table(map)
-  path
-    ? console.log('\x1b[33m%s\x1b[0m', 'Treasure was found! Argghhh matey!')
-    : console.log('\x1b[31m%s\x1b[0m', 'No treasure here! Back to the ship!')
+  renderMap(map)
+  renderNotification(path)
 }
 
 main(file)
