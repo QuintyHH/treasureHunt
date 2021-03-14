@@ -21,8 +21,8 @@ const sanitizeFile = (file) =>
 const generateMatrix = (sanitized) =>
   sanitized.map((a) =>
     a.map((c) => ({
-      [c[0]]: +c[1],
-      [c[2]]: +c[3],
+      x: +c.match(/x\d+/)[0].match(/\d+/)[0],
+      y: +c.match(/y\d+/)[0].match(/\d+/)[0],
     }))
   )
 
@@ -91,7 +91,7 @@ const formatMap = (mapObj) => {
 }
 
 const renderMap = (map) => {
-  console.clear()
+  // console.clear()
   return console.table(map)
 }
 
