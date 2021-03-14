@@ -1,0 +1,16 @@
+{
+  "name": "treasureHunt",
+  "version": "1.0.0",
+  "description": "Pirates Treasure Hunt",
+  "main": "newParser.js",
+  "scripts": {
+    "start": "nodemon newParser.js path-basic.txt ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Valentina Vanu",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.7",
+    "pathfinding": "^0.4.18"
+  }
+}
