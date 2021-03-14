@@ -9,10 +9,12 @@ const getFile = (filePath) => fs.readFileSync(filePath, 'UTF-8')
 const extractFromArray = (arr) => arr[0]
 
 const sanitizeFile = (file) =>
-  file
-    .trim()
-    .split('\n')
-    .map((l) => l.split(',').filter((l) => l.match(/(x\d+)(y\d+)/)))
+  file.split('\n').map((l) =>
+    l
+      .replace(/\s+/g, '')
+      .split(',')
+      .filter((l) => l.match(/(x\d+)(y\d+)/))
+  )
 
 const generateMatrix = (sanitized) =>
   sanitized.map((a) =>
