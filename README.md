@@ -1,11 +1,12 @@
 # treasureHunt
-
+### Install and run
 ```npm install && npm start``` the first time around.
 ```npm start``` to start watching.
 
 Save the newParser.js file to trigger a re-render.
 Everything is rendered in the terminal.
 
+### The requirements
 The problem is to create a map and then find the shortest path from a 
 start location to an end location. Think of it as being a pirate in search of 
 treasure.
